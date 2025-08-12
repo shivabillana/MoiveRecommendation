@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Recommender</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- General Body & Font --- */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #121212; /* Dark background */
+            color: #ffffff; /* White text */
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: #1e1e1e;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 500px;
+        }
+        h1 {
+            font-size: 2.5em;
+            color: #e50914; /* Netflix-like red for accent */
+            margin-bottom: 20px;
+        }
+        label {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            display: block;
+        }
+        /* --- Form Styling --- */
+        input[type="text"] {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+            padding: 15px;
+            width: calc(100% - 30px); /* Full width minus padding */
+            border-radius: 8px;
+            border: 2px solid #333;
+            background-color: #2b2b2b;
+            color: #ffffff;
+            margin-bottom: 20px;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #e50914;
+        }
+        input[type="submit"] {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.1em;
+            font-weight: 500;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            background-color: #e50914;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        input[type="submit"]:hover {
+            background-color: #f6121d;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 Movie Night Recommender</h1>
+        <form action="/recommend" method="post">
+            <label for="movie_name">Enter your favorite movie:</label>
+            <input type="text" id="movie_name" name="movie_name" required placeholder="e.g., Inception">
+            <input type="submit" value="Get Recommendations">
+        </form>
+    </div>
+</body>
+</html>
